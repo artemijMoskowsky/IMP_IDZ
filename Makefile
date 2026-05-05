@@ -12,4 +12,4 @@ lint:
 	flake8 .
 
 check:
-	safety scan
+	safety scan --keyless
