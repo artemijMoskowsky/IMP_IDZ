@@ -1,3 +1,11 @@
+import os
+import dotenv
+import sentry_sdk
+
+dotenv.load_dotenv()
+sentry_sdk.init(dsn=os.getenv("sentry-dsn"), enable_logs=True)
+
+
 def count_items(quantity: int) -> int:
     """
     Повертає кількість товарів
